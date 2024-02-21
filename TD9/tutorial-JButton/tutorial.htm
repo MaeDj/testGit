@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="fr" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="tutorial_fichiers/styles.css">
+<link rel="stylesheet" type="text/css" href="tutorial_fichiers/styles_002.css">
+<script type="text/javascript" src="tutorial_fichiers/yahoo-min.js"></script><script type="text/javascript" src="tutorial_fichiers/event-min.js"></script><script type="text/javascript" src="tutorial_fichiers/connection-min.js"></script><script type="text/javascript" src="tutorial_fichiers/swfobject.js"></script><script type="text/javascript">
+  var flashversion = swfobject.getFlashPlayerVersion();
+  YAHOO.util.Connect.asyncRequest('GET','http://arche.inpl-nancy.fr/login/environment.php?sesskey=y4GqUvCrms&amp;flashversion='+flashversion.major+'.'+flashversion.minor+'.'+flashversion.release);
+</script>
+<!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="http://arche.inpl-nancy.fr/theme/standard/styles_ie7.css" />
+<![endif]-->
+<!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="http://arche.inpl-nancy.fr/theme/standard/styles_ie6.css" />
+<![endif]-->
+
+
+    <meta name="keywords" content="moodle, 6IC5S31 TCS13: Création dynamique de contrôle ">
+    <title>6IC5S31 TCS13: Création dynamique de contrôle</title>
+   	<link rel="stylesheet" type="text/css" href="tutorial_fichiers/user_styles.css">
+    <link rel="stylesheet" type="text/css" href="tutorial_fichiers/styles_color.css">
+    <link rel="shortcut icon" href="http://arche.inpl-nancy.fr/theme/arche/favicon.ico">
+    <!--<style type="text/css">/*<![CDATA[*/ body{behavior:url(http://arche.inpl-nancy.fr/lib/csshover.htc);} /*]]>*/</style>-->
+
+<script type="text/javascript" src="tutorial_fichiers/javascript-static.js"></script>
+<script type="text/javascript" src="tutorial_fichiers/javascript-mod.php"></script>
+<script type="text/javascript" src="tutorial_fichiers/overlib.js"></script>
+<script type="text/javascript" src="tutorial_fichiers/overlib_cssstyle.js"></script>
+<script type="text/javascript" src="tutorial_fichiers/cookies.js"></script>
+<script type="text/javascript" src="tutorial_fichiers/ufo.js"></script>
+<script type="text/javascript" src="tutorial_fichiers/dropdown.js"></script>  
+
+<script type="text/javascript" defer="defer">
+//<![CDATA[
+setTimeout('fix_column_widths()', 20);
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+function openpopup(url, name, options, fullscreen) {
+    var fullurl = "http://arche.inpl-nancy.fr" + url;
+    var windowobj = window.open(fullurl, name, options);
+    if (!windowobj) {
+        return true;
+    }
+    if (fullscreen) {
+        windowobj.moveTo(0, 0);
+        windowobj.resizeTo(screen.availWidth, screen.availHeight);
+    }
+    windowobj.focus();
+    return false;
+}
+
+function uncheckall() {
+    var inputs = document.getElementsByTagName('input');
+    for(var i = 0; i < inputs.length; i++) {
+        inputs[i].checked = false;
+    }
+}
+
+function checkall() {
+    var inputs = document.getElementsByTagName('input');
+    for(var i = 0; i < inputs.length; i++) {
+        inputs[i].checked = true;
+    }
+}
+
+function inserttext(text) {
+  text = ' ' + text + ' ';
+  if ( opener.document.forms['theform'].message.createTextRange && opener.document.forms['theform'].message.caretPos) {
+    var caretPos = opener.document.forms['theform'].message.caretPos;
+    caretPos.text = caretPos.text.charAt(caretPos.text.length - 1) == ' ' ? text + ' ' : text;
+  } else {
+    opener.document.forms['theform'].message.value  += text;
+  }
+  opener.document.forms['theform'].message.focus();
+}
+
+function getElementsByClassName(oElm, strTagName, oClassNames){
+	var arrElements = (strTagName == "*" && oElm.all)? oElm.all : oElm.getElementsByTagName(strTagName);
+	var arrReturnElements = new Array();
+	var arrRegExpClassNames = new Array();
+	if(typeof oClassNames == "object"){
+		for(var i=0; i<oClassNames.length; i++){
+			arrRegExpClassNames.push(new RegExp("(^|\\s)" + oClassNames[i].replace(/\-/g, "\\-") + "(\\s|$)"));
+		}
+	}
+	else{
+		arrRegExpClassNames.push(new RegExp("(^|\\s)" + oClassNames.replace(/\-/g, "\\-") + "(\\s|$)"));
+	}
+	var oElement;
+	var bMatchesAll;
+	for(var j=0; j<arrElements.length; j++){
+		oElement = arrElements[j];
+		bMatchesAll = true;
+		for(var k=0; k<arrRegExpClassNames.length; k++){
+			if(!arrRegExpClassNames[k].test(oElement.className)){
+				bMatchesAll = false;
+				break;
+			}
+		}
+		if(bMatchesAll){
+			arrReturnElements.push(oElement);
+		}
+	}
+	return (arrReturnElements)
+}
+//]]>
+</script>
+</head><body class="mod-resource course-176 dir-ltr lang-fr_utf8" id="mod-resource-view">
+
+<div id="page">
+
+    <div id="header" class="clearfix">
+        <h1 class="headermain"><!--<img src="http://arche.inpl-nancy.fr/theme/arche/images/texte_pascal.gif" alt="plate-forme d'apprentisage, Supports de cours et Activit&eacute;e en ligne" />--></h1>
+<div class="headermenu"><div class="navigation">
+<ul><li>
+<a title="Tous les historiques" onclick="this.target='_top';" href="http://arche.inpl-nancy.fr/course/report/log/index.php?chooselog=1&amp;user=0&amp;date=0&amp;id=176&amp;modid=8261"><img class="icon log" src="tutorial_fichiers/log.gif" alt="Tous les historiques"></a>
+</li><li><form action="http://arche.inpl-nancy.fr/mod/resource/view.php" onclick="this.target='_top';"><fieldset class="invisiblefieldset"><input name="id" value="8267" type="hidden"><button type="submit" title="Activité précédente"><span class="arrow ">◄</span><span class="accesshide ">&nbsp;Activité précédente</span></button></fieldset></form></li><li><form action="http://arche.inpl-nancy.fr/course/jumpto.php" method="get" id="navmenupopup" class="popupform"><div><select id="navmenupopup_jump" name="jump" onchange="self.location=document.getElementById('navmenupopup').jump.options[document.getElementById('navmenupopup').jump.selectedIndex].value;">
+   <option value="http://arche.inpl-nancy.fr/mod/forum/view.php?id=3780" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/forum/icon.gif&quot;);">Forum des nouvelles</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7830" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Liste des groupes vendredi matin</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7831" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Liste des groupes vendredi après-midi</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7837" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Introduction à la programmation (Karl Tombre)</option>
+   <optgroup label="Semaine 1">   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7864" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Power Point Cours 1</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7797" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">TD 1</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7798" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Tutoriel Netbeans</option>
+   <option value="http://arche.inpl-nancy.fr/mod/assignment/view.php?id=7825" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/assignment/icon.gif&quot;);">Retour du TD1</option>
+   <option value="http://arche.inpl-nancy.fr/mod/hotpot/view.php?id=7855" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/hotpot/icon.gif&quot;);">Variables, boucles et instructions de test</option>
+   </optgroup>   <optgroup label="Semaine 2">   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7943" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Power Point Cours 2</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7941" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">TD 2</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7930" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Tutoriel interface graphique</option>
+   <option value="http://arche.inpl-nancy.fr/mod/assignment/view.php?id=7944" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/assignment/icon.gif&quot;);">Retour du TD 2</option>
+   <option value="http://arche.inpl-nancy.fr/mod/hotpot/view.php?id=8004" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/hotpot/icon.gif&quot;);">Chaînes de caractères - Saisie clavier -...</option>
+   </optgroup>   <optgroup label="Semaine 3">   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8078" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Power point Cours 3</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8023" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Analyse de la calculatrice</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8035" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">TD 3</option>
+   <option value="http://arche.inpl-nancy.fr/mod/assignment/view.php?id=8077" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/assignment/icon.gif&quot;);">Retour du TD 3</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8205" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Corrigé du TD3</option>
+   </optgroup>   <optgroup label="Semaine 5">   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8206" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Power point Cours 4</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8163" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">TD 4</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8181" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Utilisation d'une jList</option>
+   <option value="http://arche.inpl-nancy.fr/mod/assignment/view.php?id=8190" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/assignment/icon.gif&quot;);">Retour du TD 4</option>
+   </optgroup>   <optgroup label="Semaine 6">   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8267" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">(TD 5)</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8261" selected="selected" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Aller à...</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8270" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">(Création d'un spinner)</option>
+   <option value="http://arche.inpl-nancy.fr/mod/assignment/view.php?id=8272" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/assignment/icon.gif&quot;);">Retour du TD 5</option>
+    </optgroup></select><input name="sesskey" value="y4GqUvCrms" type="hidden"><div id="noscriptnavmenupopup" style="display: none;"><input value="Valider" type="submit"></div><script type="text/javascript">
+//<![CDATA[
+document.getElementById("noscriptnavmenupopup").style.display = "none";
+//]]>
+</script></div></form></li><li><form action="http://arche.inpl-nancy.fr/mod/resource/view.php" onclick="this.target='_top';"><fieldset class="invisiblefieldset"><input name="id" value="8270" type="hidden"><button type="submit" title="Activité suivante"><span class="accesshide ">Activité suivante&nbsp;</span><span class="arrow ">►</span></button></fieldset></form></li></ul>
+</div></div>
+    </div>
+        
+    <div class="navbar clearfix">
+        <div class="breadcrumb"><h2 class="accesshide ">Vous êtes ici</h2> <ul>
+<li class="first"><a onclick="this.target='_top'" href="http://arche.inpl-nancy.fr/">Accueil</a></li><li> <span class="accesshide ">/&nbsp;</span><span class="arrow sep">►</span> <a onclick="this.target='_top'" href="http://arche.inpl-nancy.fr/course/view.php?id=176">6IC5S31 TCS13</a></li><li> <span class="accesshide ">/&nbsp;</span><span class="arrow sep">►</span> <a onclick="this.target='_top'" href="http://arche.inpl-nancy.fr/mod/resource/index.php?id=176">Ressources</a></li><li> <span class="accesshide ">/&nbsp;</span><span class="arrow sep">►</span> Création dynamique de contrôle</li></ul></div>
+        <div class="navbutton">&nbsp;</div>
+    </div>   
+    <!-- END OF HEADER -->
+    <div id="content">
+<div class="box generalbox generalboxcontent boxaligncenter clearfix"> <big><big style="font-weight: bold;">Création dynamique de contrôle</big></big><br><br>Au
+ lieu de créer des contrôles graphiques dans la phase de conception du 
+programme, ceux-ci peuvent être insérés dynamiquement par le programme 
+au moment de l'exécution de ce programme. Il est évident que si nous 
+souhaitons créer un lot de contrôle du même type par exemple 10 boutons,
+ le plus simple est de faire un tableau de 10 boutons, afin d'obtenir 
+une interface graphique semblable à celle-ci :<br><br><img title="Création de 10 contrôles" style="width: 672px; height: 335px;" alt="Création de 10 contrôles" src="tutorial_fichiers/Image0.jpg" border="0" vspace="0" width="672" height="335" hspace="0"><br>
+<ol>
+  <li><big style="font-weight: bold;">Où mettre le code de création ?</big></li>
+</ol>
+<div style="margin-left: 40px;">Il faut que ce code s'exécute au 
+chargement de notre fenêtre afin que celle-ci apparaisse complète sans 
+intervention de l'utilisateur. Notre code va donc se trouver en début de
+ programme après la phase d'initialisation des composants :<br><br>
+  <table border="1" cellpadding="2" cellspacing="2" width="100%"> <tbody>
+    <tr>
+      <td><img style="width: 689px; height: 369px;" alt="Position du code" src="tutorial_fichiers/Image1.jpg" title="Position du code" border="0" vspace="0" width="689" height="369" hspace="0"><br>
+      </td>
+    </tr> </tbody>
+  </table><br>Pour que notre tableau de boutons soit visible dans toute 
+l'application nous allons le déclarer juste après la déclaration du 
+cadre (frame) principal.<br></div><br>
+<ol start="2">
+  <li><big><span style="font-weight: bold;">Que doit faire ce code ?</span></big></li>
+</ol>
+<div style="margin-left: 40px;">
+  <ol style="list-style-type: lower-alpha;">
+    <li>créer le contrôle</li>
+    <li>donner sa position sur la frame</li>
+    <li>lui donner une taille</li>
+    <li>mettre un texte si nécessaire</li>
+    <li>donner le nom de la méthode à exécuter en cas d'action sur le bouton</li>
+    <li>l'ajouter à la frame</li>
+    <li>demander l'affichage de la feuille modifiée</li>
+  </ol></div>
+<ol start="3">
+  <li><big><span style="font-weight: bold;">Ecrire la méthode qui s'exécute en cas d'action sur le bouton </span></big></li>
+</ol>
+<div style="margin-left: 40px;">Nous savons que lorsqu'un clic de souris
+ est effectué il est pris en charge par le système qui répère 
+l'application concernée sur l'écran, lors d'un clic sur un bouton de la 
+fenêtre de notre programme, l'événement sera donc transmis à la Java 
+Machine Virtuelle, qui retransmet cet événement à notre programme, il 
+suffit donc de signaler dans notre programme java que nous souhaitons 
+récupérer l'événement lors qu'une action sur un bouton est effectuée. En
+ terme technique on dit implémenter un ActionListener (un "auditeur 
+d'action" !). C'est ce que nous allons implanter.<br><br>Quel que soit 
+le bouton actionné, c'est la même méthode qui va s'exécuter, il faut 
+donc que lors de l'appel de cette méthode nous sachions quel bouton a 
+été cliqué, on dit en terme technique récupérer l'adresse du contrôle 
+appelant, nous pourrons alors effectuer l'action souhaité par le 
+programme.<br>
+  <ol style="list-style-type: lower-alpha;">
+    <li>récupération de l'adresse</li>
+    <li>actions à effectuer</li>
+  </ol></div><big><big style="font-weight: bold;"><br>EXEMPLE</big></big><br><br>Créons
+ un petit programme qui génère 10 boutons numérotés de 1 à 10, qui aura 
+le comportement suivant : lorsqu'un bouton est cliqué il devient grisé 
+et n'est plus actif (il n'est plus <span style="font-style: italic;">enabled</span>), de plus le programme affiche dans la fenêtre d'exécution le numéro du bouton lorsqu'il est cliqué.<br><br>Il
+ nous faut en premier lieu déclarer un tableau de bouton. Bien 
+évidemment Netbeans vous demande d'importer une bibliothèque pour les 
+boutons, et vous acceptez.<br><br>
+<table border="1" cellpadding="2" cellspacing="2" width="100%"> <tbody>
+  <tr>
+    <td><img style="width: 470px; height: 333px;" alt="Import de la biblothèque swing" src="tutorial_fichiers/Image2.jpg" title="Import de la biblothèque swing" border="0" vspace="0" width="470" height="333" hspace="0"><br>
+    </td>
+  </tr> </tbody>
+</table><br>Voici l'image du code :<br><br>
+<table border="1" cellpadding="2" cellspacing="2" width="100%"> <tbody>
+  <tr>
+    <td><img style="width: 649px; height: 542px;" alt="code du bouton" src="tutorial_fichiers/Image3.jpg" title="code du bouton" border="0" vspace="0" width="649" height="542" hspace="0">
+    </td>
+  </tr> </tbody>
+</table><br>Voici le source ce qui vous permet de faire un copié/collé dans votre code :<br><br> // Les variables horiz et vert permettent de positionner les boutons<br> // c'est le point de départ du premier bouton<br> int Horiz, Vert;<br> Horiz = 60;<br> Vert = 100;<br> // On crée les 10 boutons <br> for (int i = 1; i &lt; 10; i++) {<br> // Création du bouton<br> lesBoutons[i] = new JButton();<br> // Emplacement<br> lesBoutons[i].setLocation(Horiz, Vert);<br> // Taille<br> lesBoutons[i].setSize(50, 50);<br> // Numéro<br> lesBoutons[i].setText(String.valueOf(i));<br> // ajout de l'action en cas de pression <br> lesBoutons[i].addActionListener(new MyActionListener());<br> // on ajoute les chiffres au panel<br> mainPanel.add(lesBoutons[i]);<br> Horiz = Horiz + 60;<br> mainPanel.repaint();<br> }<br><br>Vous remarquez que Netbeans vous indique que la class MyActionListener n'existe pas, patience nous allons l'écrire !<br><br>Entrez
+ la définition de classe suivante avec ses crochets en fin de fichier 
+juste avant les déclarations, regardez où est l'ascenseur à droite et 
+positionnez-vous au même endroit. <br><br>private class MyActionListener implements ActionListener {<br> }<br><br>
+<table border="1" cellpadding="2" cellspacing="2" width="100%"> <tbody>
+  <tr>
+    <td><img style="width: 652px; height: 450px;" alt="création listener" src="tutorial_fichiers/Image4.jpg" title="création listener" border="0" vspace="0" width="652" height="450" hspace="0">
+    </td>
+  </tr> </tbody>
+</table><br>Bien évidemment, Netbeans n'est pas satisfait, il souhaite créer toutes les méthodes associées à une action :<br><br>
+<table border="1" cellpadding="2" cellspacing="2" width="100%"> <tbody>
+  <tr>
+    <td><img style="width: 658px; height: 269px;" alt="implantation méthodes" src="tutorial_fichiers/Image5.jpg" title="implantation méthodes" border="0" vspace="0" width="658" height="269" hspace="0">
+    </td>
+  </tr> </tbody>
+</table><br>Laissons le faire et il nous crée le code suivant :<br><br>
+<table border="1" cellpadding="2" cellspacing="2" width="100%"> <tbody>
+  <tr>
+    <td><img style="width: 656px; height: 142px;" alt="création par défaut" src="tutorial_fichiers/Image7.jpg" title="création par défaut" border="0" vspace="0" width="656" height="142" hspace="0">
+    </td>
+  </tr> </tbody>
+</table><br>Nous pouvons nous débarrasser du code inutile, c'est à dire 
+du code de la méthode proposé par défaut et entrer le code qui permettra
+ le traitement que nous souhaitons effectuer :<br><br>public void actionPerformed(ActionEvent e) {<br> JButton courant = (JButton) e.getSource();<br> System.out.println("Enabled " + courant.getText());<br> courant.setEnabled(false);<br> }<br><br>
+<table border="1" cellpadding="2" cellspacing="2" width="100%"> <tbody>
+  <tr>
+    <td><img style="width: 605px; height: 186px;" alt="code événement" src="tutorial_fichiers/Image8.jpg" title="code événement" border="0" vspace="0" width="605" height="186" hspace="0">
+    </td>
+  </tr> </tbody>
+</table><br>Nous pouvons faire fonctionner notre programme :<br><br>
+<table border="1" cellpadding="2" cellspacing="2" width="100%"> <tbody>
+  <tr>
+    <td><img style="width: 725px; height: 552px;" alt="affichage résultat" src="tutorial_fichiers/Image9.jpg" title="affichage résultat" border="0" vspace="0" width="725" height="552" hspace="0">
+    </td>
+  </tr> </tbody>
+</table><br><br><big><big><span style="font-weight: bold;">Remarques :</span></big></big><br><br>
+<ul>
+  <li>Lorsque l'on clique sur un bouton, notre méthode nous permet de 
+retrouver le bouton qui a été actionné. Sur la trace on voit que le 
+bouton 3 a été cliqué.</li>
+  <li>Vous avez remarqué qu'il n'y a que 9 boutons parce que la boucle 
+de création des boutons ne commence qu"à 1, peut-être parce que le 0 
+n'existe pas au loto...</li>
+</ul> </div><div class="modified">Modifié le: mardi 9 novembre 2010, 17:35</div>
+</div> <!-- end div containerContent -->
+<!-- START OF FOOTER -->
+<div id="footer">
+
+<p class="helplink"><a href="http://docs.moodle.org/fr/mod/resource/view" target="_blank"><img class="iconhelp" src="tutorial_fichiers/docs.gif" alt="">Documentation Moodle pour cette page</a></p>
+<hr style="height: 1px; width: 100%;" color="#a40217" noshade="noshade"><br>
+<table align="center" width="90%"><tbody><tr>
+<td align="center"> <div class="homelink"><a href="http://arche.inpl-nancy.fr/course/view.php?id=176">6IC5S31 TCS13</a></div></td>
+<td align="right">
+                
+</td></tr></tbody></table>
+
+
+
+
+</div>
+</div>
+<phpmyvisites><a href="http://www.phpmyvisites.net/" title="phpMyVisites | Open source web analytics" onclick="window.open(this.href);return(false);"><script type="text/javascript">
+<!--
+var a_vars = Array();
+var pagename='';
+
+var phpmyvisitesSite = 32;
+var phpmyvisitesURL = "https://web.inpl-nancy.fr/phpmyvisites/phpmyvisites.php";
+//-->
+</script>
+<script language="javascript" src="tutorial_fichiers/phpmyvisites.js" type="text/javascript"></script><img src="tutorial_fichiers/phpmyvisites.png" alt="phpMyVisites" style="border: 0pt none;">
+
+<object><noscript></noscript></object></a>
+<!-- /phpmyvisites --> 
+
+</phpmyvisites></body></html>

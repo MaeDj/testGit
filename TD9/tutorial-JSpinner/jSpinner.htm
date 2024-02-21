@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="fr" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="jSpinner_fichiers/styles.css">
+<link rel="stylesheet" type="text/css" href="jSpinner_fichiers/styles_002.css">
+<script type="text/javascript" src="jSpinner_fichiers/yahoo-min.js"></script><script type="text/javascript" src="jSpinner_fichiers/event-min.js"></script><script type="text/javascript" src="jSpinner_fichiers/connection-min.js"></script><script type="text/javascript" src="jSpinner_fichiers/swfobject.js"></script><script type="text/javascript">
+  var flashversion = swfobject.getFlashPlayerVersion();
+  YAHOO.util.Connect.asyncRequest('GET','http://arche.inpl-nancy.fr/login/environment.php?sesskey=y4GqUvCrms&amp;flashversion='+flashversion.major+'.'+flashversion.minor+'.'+flashversion.release);
+</script>
+<!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="http://arche.inpl-nancy.fr/theme/standard/styles_ie7.css" />
+<![endif]-->
+<!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="http://arche.inpl-nancy.fr/theme/standard/styles_ie6.css" />
+<![endif]-->
+
+
+    <meta name="keywords" content="moodle, 6IC5S31 TCS13: Création d'un spinner ">
+    <title>6IC5S31 TCS13: Création d'un spinner</title>
+   	<link rel="stylesheet" type="text/css" href="jSpinner_fichiers/user_styles.css">
+    <link rel="stylesheet" type="text/css" href="jSpinner_fichiers/styles_color.css">
+    <link rel="shortcut icon" href="http://arche.inpl-nancy.fr/theme/arche/favicon.ico">
+    <!--<style type="text/css">/*<![CDATA[*/ body{behavior:url(http://arche.inpl-nancy.fr/lib/csshover.htc);} /*]]>*/</style>-->
+
+<script type="text/javascript" src="jSpinner_fichiers/javascript-static.js"></script>
+<script type="text/javascript" src="jSpinner_fichiers/javascript-mod.php"></script>
+<script type="text/javascript" src="jSpinner_fichiers/overlib.js"></script>
+<script type="text/javascript" src="jSpinner_fichiers/overlib_cssstyle.js"></script>
+<script type="text/javascript" src="jSpinner_fichiers/cookies.js"></script>
+<script type="text/javascript" src="jSpinner_fichiers/ufo.js"></script>
+<script type="text/javascript" src="jSpinner_fichiers/dropdown.js"></script>  
+
+<script type="text/javascript" defer="defer">
+//<![CDATA[
+setTimeout('fix_column_widths()', 20);
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+function openpopup(url, name, options, fullscreen) {
+    var fullurl = "http://arche.inpl-nancy.fr" + url;
+    var windowobj = window.open(fullurl, name, options);
+    if (!windowobj) {
+        return true;
+    }
+    if (fullscreen) {
+        windowobj.moveTo(0, 0);
+        windowobj.resizeTo(screen.availWidth, screen.availHeight);
+    }
+    windowobj.focus();
+    return false;
+}
+
+function uncheckall() {
+    var inputs = document.getElementsByTagName('input');
+    for(var i = 0; i < inputs.length; i++) {
+        inputs[i].checked = false;
+    }
+}
+
+function checkall() {
+    var inputs = document.getElementsByTagName('input');
+    for(var i = 0; i < inputs.length; i++) {
+        inputs[i].checked = true;
+    }
+}
+
+function inserttext(text) {
+  text = ' ' + text + ' ';
+  if ( opener.document.forms['theform'].message.createTextRange && opener.document.forms['theform'].message.caretPos) {
+    var caretPos = opener.document.forms['theform'].message.caretPos;
+    caretPos.text = caretPos.text.charAt(caretPos.text.length - 1) == ' ' ? text + ' ' : text;
+  } else {
+    opener.document.forms['theform'].message.value  += text;
+  }
+  opener.document.forms['theform'].message.focus();
+}
+
+function getElementsByClassName(oElm, strTagName, oClassNames){
+	var arrElements = (strTagName == "*" && oElm.all)? oElm.all : oElm.getElementsByTagName(strTagName);
+	var arrReturnElements = new Array();
+	var arrRegExpClassNames = new Array();
+	if(typeof oClassNames == "object"){
+		for(var i=0; i<oClassNames.length; i++){
+			arrRegExpClassNames.push(new RegExp("(^|\\s)" + oClassNames[i].replace(/\-/g, "\\-") + "(\\s|$)"));
+		}
+	}
+	else{
+		arrRegExpClassNames.push(new RegExp("(^|\\s)" + oClassNames.replace(/\-/g, "\\-") + "(\\s|$)"));
+	}
+	var oElement;
+	var bMatchesAll;
+	for(var j=0; j<arrElements.length; j++){
+		oElement = arrElements[j];
+		bMatchesAll = true;
+		for(var k=0; k<arrRegExpClassNames.length; k++){
+			if(!arrRegExpClassNames[k].test(oElement.className)){
+				bMatchesAll = false;
+				break;
+			}
+		}
+		if(bMatchesAll){
+			arrReturnElements.push(oElement);
+		}
+	}
+	return (arrReturnElements)
+}
+//]]>
+</script>
+</head><body class="mod-resource course-176 dir-ltr lang-fr_utf8" id="mod-resource-view">
+
+<div id="page">
+
+    <div id="header" class="clearfix">
+        <h1 class="headermain"><!--<img src="http://arche.inpl-nancy.fr/theme/arche/images/texte_pascal.gif" alt="plate-forme d'apprentisage, Supports de cours et Activit&eacute;e en ligne" />--></h1>
+<div class="headermenu"><div class="navigation">
+<ul><li>
+<a title="Tous les historiques" onclick="this.target='_top';" href="http://arche.inpl-nancy.fr/course/report/log/index.php?chooselog=1&amp;user=0&amp;date=0&amp;id=176&amp;modid=8270"><img class="icon log" src="jSpinner_fichiers/log.gif" alt="Tous les historiques"></a>
+</li><li><form action="http://arche.inpl-nancy.fr/mod/resource/view.php" onclick="this.target='_top';"><fieldset class="invisiblefieldset"><input name="id" value="8261" type="hidden"><button type="submit" title="Activité précédente"><span class="arrow ">◄</span><span class="accesshide ">&nbsp;Activité précédente</span></button></fieldset></form></li><li><form action="http://arche.inpl-nancy.fr/course/jumpto.php" method="get" id="navmenupopup" class="popupform"><div><select id="navmenupopup_jump" name="jump" onchange="self.location=document.getElementById('navmenupopup').jump.options[document.getElementById('navmenupopup').jump.selectedIndex].value;">
+   <option value="http://arche.inpl-nancy.fr/mod/forum/view.php?id=3780" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/forum/icon.gif&quot;);">Forum des nouvelles</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7830" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Liste des groupes vendredi matin</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7831" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Liste des groupes vendredi après-midi</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7837" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Introduction à la programmation (Karl Tombre)</option>
+   <optgroup label="Semaine 1">   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7864" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Power Point Cours 1</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7797" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">TD 1</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7798" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Tutoriel Netbeans</option>
+   <option value="http://arche.inpl-nancy.fr/mod/assignment/view.php?id=7825" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/assignment/icon.gif&quot;);">Retour du TD1</option>
+   <option value="http://arche.inpl-nancy.fr/mod/hotpot/view.php?id=7855" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/hotpot/icon.gif&quot;);">Variables, boucles et instructions de test</option>
+   </optgroup>   <optgroup label="Semaine 2">   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7943" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Power Point Cours 2</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7941" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">TD 2</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=7930" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Tutoriel interface graphique</option>
+   <option value="http://arche.inpl-nancy.fr/mod/assignment/view.php?id=7944" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/assignment/icon.gif&quot;);">Retour du TD 2</option>
+   <option value="http://arche.inpl-nancy.fr/mod/hotpot/view.php?id=8004" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/hotpot/icon.gif&quot;);">Chaînes de caractères - Saisie clavier -...</option>
+   </optgroup>   <optgroup label="Semaine 3">   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8078" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Power point Cours 3</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8023" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Analyse de la calculatrice</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8035" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">TD 3</option>
+   <option value="http://arche.inpl-nancy.fr/mod/assignment/view.php?id=8077" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/assignment/icon.gif&quot;);">Retour du TD 3</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8205" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Corrigé du TD3</option>
+   </optgroup>   <optgroup label="Semaine 5">   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8206" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Power point Cours 4</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8163" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">TD 4</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8181" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Utilisation d'une jList</option>
+   <option value="http://arche.inpl-nancy.fr/mod/assignment/view.php?id=8190" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/assignment/icon.gif&quot;);">Retour du TD 4</option>
+   </optgroup>   <optgroup label="Semaine 6">   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8267" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">(TD 5)</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8261" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">(Création dynamique de contrôle)</option>
+   <option value="http://arche.inpl-nancy.fr/mod/resource/view.php?id=8270" selected="selected" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/resource/icon.gif&quot;);">Aller à...</option>
+   <option value="http://arche.inpl-nancy.fr/mod/assignment/view.php?id=8272" style="background-image: url(&quot;http://arche.inpl-nancy.fr/theme/arche/pix/mod/assignment/icon.gif&quot;);">Retour du TD 5</option>
+    </optgroup></select><input name="sesskey" value="y4GqUvCrms" type="hidden"><div id="noscriptnavmenupopup" style="display: none;"><input value="Valider" type="submit"></div><script type="text/javascript">
+//<![CDATA[
+document.getElementById("noscriptnavmenupopup").style.display = "none";
+//]]>
+</script></div></form></li><li><form action="http://arche.inpl-nancy.fr/mod/assignment/view.php" onclick="this.target='_top';"><fieldset class="invisiblefieldset"><input name="id" value="8272" type="hidden"><button type="submit" title="Activité suivante"><span class="accesshide ">Activité suivante&nbsp;</span><span class="arrow ">►</span></button></fieldset></form></li></ul>
+</div></div>
+    </div>
+        
+    <div class="navbar clearfix">
+        <div class="breadcrumb"><h2 class="accesshide ">Vous êtes ici</h2> <ul>
+<li class="first"><a onclick="this.target='_top'" href="http://arche.inpl-nancy.fr/">Accueil</a></li><li> <span class="accesshide ">/&nbsp;</span><span class="arrow sep">►</span> <a onclick="this.target='_top'" href="http://arche.inpl-nancy.fr/course/view.php?id=176">6IC5S31 TCS13</a></li><li> <span class="accesshide ">/&nbsp;</span><span class="arrow sep">►</span> <a onclick="this.target='_top'" href="http://arche.inpl-nancy.fr/mod/resource/index.php?id=176">Ressources</a></li><li> <span class="accesshide ">/&nbsp;</span><span class="arrow sep">►</span> Création d'un spinner</li></ul></div>
+        <div class="navbutton">&nbsp;</div>
+    </div>   
+    <!-- END OF HEADER -->
+    <div id="content">
+<div class="box generalbox generalboxcontent boxaligncenter clearfix"> <big><big><big><span style="font-weight: bold;">Utilisation d'un Spinner</span></big></big></big><br><br>Les
+ curseurs (jSlider) et les spinners font tous deux la même chose. Ils 
+permettent à l'utilisateur de choisir une valeur dans un intervalle 
+prédefini.<br><br>Posez un spinner sur votre feuille.<br><br>
+<table border="1" cellpadding="2" cellspacing="2" width="100%"> <tbody>
+  <tr>
+    <td><img style="width: 671px; height: 266px;" alt="Choix spinner" src="jSpinner_fichiers/Image1.jpg" title="Choix spinner" border="0" vspace="0" width="671" height="266" hspace="0">
+    </td>
+  </tr> </tbody>
+</table><br>Dans les propriétés repérez celle qui se nomme model, 
+cliquez sur le bouton de suite (... " points) à droite de la propriété, 
+une fenêtre s'ouvre<br><br><img style="width: 502px; height: 445px;" alt="paramètres spinner" src="jSpinner_fichiers/Image2.jpg" title="paramètres spinner" border="0" vspace="0" width="502" height="445" hspace="0"><br>Vous
+ pouvez choisir plusieurs modèles (entre autre un modèle qui permet de 
+choisir les dates, ce qui est toujours pénible à implanter en 
+informatique), mais ici nous choisissons Number<br><br><img style="width: 498px; height: 436px;" alt="modèle spinner" src="jSpinner_fichiers/Image3.jpg" title="modèle spinner" border="0" vspace="0" width="498" height="436" hspace="0"><br><br>Est-il nécessaire d'en dire plus, vous choisissez, la valeur initiale, le Min et le Max ainsi que le pas :<br><br><img style="width: 496px; height: 437px;" alt="propriétés spinner" src="jSpinner_fichiers/Image4.jpg" title="propriétés spinner" border="0" vspace="0" width="496" height="437" hspace="0"><br><big><big><br style="font-weight: bold;"><span style="font-weight: bold;">Utilisation de la valeur sélectionnée :</span></big></big><br><br>On obtient la valeur sélectionnée avec la méthode :<br><br>
+<div style="margin-left: 40px;">jSpinnerGain.getValue()<br></div><br>Mais
+ cette méthode retourne une valeur de type "object" car ce que retoune 
+un spinner peut aussi bien être un nombre qu'une date etc...<br><br>Il faut donc convertir cet objet en chaîne de caractères :<br><br>
+<div style="margin-left: 40px;">String.valueOf(jSpinnerGain.getValue())<br></div><br>Puis convertir cette chaîne en entier pour récupérer la valeur :<br><br>
+<div style="margin-left: 40px;">Integer.parseInt(String.valueOf(jSpinnerGain.getValue()))<br></div><br>Intuitif, non ? </div><div class="modified">Modifié le: mercredi  10 novembre 2010, 10:42</div>
+</div> <!-- end div containerContent -->
+<!-- START OF FOOTER -->
+<div id="footer">
+
+<p class="helplink"><a href="http://docs.moodle.org/fr/mod/resource/view" target="_blank"><img class="iconhelp" src="jSpinner_fichiers/docs.gif" alt="">Documentation Moodle pour cette page</a></p>
+<hr style="height: 1px; width: 100%;" color="#a40217" noshade="noshade"><br>
+<table align="center" width="90%"><tbody><tr>
+<td align="center"> <div class="homelink"><a href="http://arche.inpl-nancy.fr/course/view.php?id=176">6IC5S31 TCS13</a></div></td>
+<td align="right">
+                
+</td></tr></tbody></table>
+
+
+
+
+</div>
+</div>
+<phpmyvisites><a href="http://www.phpmyvisites.net/" title="phpMyVisites | Open source web analytics" onclick="window.open(this.href);return(false);"><script type="text/javascript">
+<!--
+var a_vars = Array();
+var pagename='';
+
+var phpmyvisitesSite = 32;
+var phpmyvisitesURL = "https://web.inpl-nancy.fr/phpmyvisites/phpmyvisites.php";
+//-->
+</script>
+<script language="javascript" src="jSpinner_fichiers/phpmyvisites.js" type="text/javascript"></script><img src="jSpinner_fichiers/phpmyvisites.png" alt="phpMyVisites" style="border: 0pt none;">
+
+<object><noscript></noscript></object></a>
+<!-- /phpmyvisites --> 
+
+</phpmyvisites></body></html>

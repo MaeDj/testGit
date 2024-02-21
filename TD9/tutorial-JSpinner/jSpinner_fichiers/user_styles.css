@@ -1,0 +1,412 @@
+body {
+	font-size: 100%;
+	color: #333333;
+  font-family:Arial, Verdana, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0px 0px 10px;
+	background-repeat: repeat-y;
+
+
+}
+
+
+#page {
+	margin:0;
+
+	padding:0;
+	background-image: url(images/bg_body.jpg);
+	background-repeat: repeat-x;
+
+background-color:#ffffff;
+}
+
+
+
+
+/*body {
+  font-size: 100%;
+  color: #333333;
+  font-family: georgia, times, serif;
+  margin: 0;
+  padding: 5px 10px 10px;
+  border-top-width: 10px;
+  border-top-style: solid;
+  border-top-color: #55CC00;
+  		  	background-image: url(images/bg_body_x_y.jpg);
+	background-repeat: repeat;
+
+}*/
+div.clearer {
+  clear: both;
+}
+a:link {
+
+  color: #9B222F;
+}
+a:visited {
+  color: #CF0017;
+}
+a:hover {
+  color: #CF0017;
+}
+
+
+
+div#LoginConnection a:link {  
+color:#F3F1E9;
+}
+
+div#LoginConnection a:visited {  
+color:#F3F1E9;
+}
+
+
+
+table.generaltable {
+  background-color: #EEEEEE;
+}
+img.resize {
+  width: 1em;
+  height: 1em;
+}
+.helplink {
+  margin: 0.5em 0;text-align:center;
+}
+h1.headermain {
+  color: #449900;
+}
+h2.headingblock {
+  border-style: none;
+}
+table.loginbox {
+  background-color: #EEEEEE;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FFFFFF #DDDDDD #DDDDDD #FFFFFF;
+}
+table.loginbox td.content {
+  background-color: #F3F1E9;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FFFFFF #DDDDDD #DDDDDD #FFFFFF;
+}
+div.noticebox {
+  background-color: #EEEEEE;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FFFFFF #DDDDDD #DDDDDD #FFFFFF;
+}
+table.generaltable td {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FFFFFF #DDDDDD #DDDDDD #FFFFFF;
+}
+div.generalbox {
+  border-top-width: 1px;
+  border-style: solid none none;
+  border-top-color: #DDDDDD;
+}
+
+div.generalbox  h1{
+  border-top-width: 1px;
+  border-style: solid none none;
+  border-top-color: #DDDDDD;
+  color:#EDE9DC;
+}
+
+div.generalbox  p{
+  border-top-width: 1px;
+  border-style: solid none none;
+  border-top-color: #DDDDDD;
+}
+
+table.generalbox {
+  border-top-width: 1px;
+  border-style: solid none none;
+  border-top-color: #DDDDDD;
+}
+table.generaltable th.header {
+  background-color: #DDDDDD;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #EEEEEE #CCCCCC #CCCCCC #EEEEEE;
+}
+div.informationbox {
+  background-color: #EEEEEE;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FFFFFF #DDDDDD #DDDDDD #FFFFFF;
+}
+table.userinfobox {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #DDDDDD;
+}
+p.copyright {
+  text-align: center;
+}
+div.headermenu {
+  font-size: 0.9em;
+}
+div.headermenu div.logininfo {
+  /*margin-bottom: 0.2em;*/
+  margin-bottom: 8px;
+  font-size: 0.8em;
+  font-family:Arial, Verdana, Helvetica, sans-serif;
+  color:#000000;
+}
+
+
+div#LoginConnection
+ {
+  font-size: 0.8em;
+  font-weight:bold;
+color:#DBABAA;
+margin-top:10px;}
+
+div.breadcrumb {
+  font-size: 0.8em;
+  padding-left: 0.3em;
+}
+table.tabs td.side {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #999999;
+}
+div.navbar div.navbutton form {
+  float: left;
+}
+div.navbar div.navbutton {
+  margin-top: 3px;
+}
+div.navbar {
+	padding_top:0;
+	padding_bottom:0;
+	margin-top:0;
+	margin-bottom:0;
+	margin-left:0;
+	padding-left:28px;
+	border-style: none;
+	text-align:left;
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+	background-position: left top;
+	height:32px;
+	background-image: url(images/bg_ariane.gif);
+}
+
+ /* border-top-width: 20px;
+  border-style: solid none none;
+  border-top-color: #D2DCE8;*/
+div#footer {
+  margin-top: 0;
+  padding_top:0;
+  font-size: 0.75em;
+
+background-repeat: repeat_x;
+min-height:100px;
+
+
+}
+
+div#footerImage {
+  margin: 0;
+  padding:0;
+  left:0;
+  width:1000px;
+  min-height:100px;
+
+    background-image: url(images/bg_bas_no_repeat.jpg);
+background-repeat: no_repeat;
+
+
+}
+div#content {
+
+	padding: 10px 0;
+	font-size: 0.75em;
+	line-height: 1.6em;
+	margin-top: 0;
+	margin-bottom:0;
+
+
+}
+ul.section li {
+  margin: 0.2em 0;
+}
+div.sideblock div.content * {
+  text-align: left;
+}
+div.sideblock ul.list span.c1 {
+  padding-left: 0.3em;
+}
+div.sideblock div.title h2 {
+/*position:relative;*/
+line-height: 1.2em;
+  font-size: 1.0em;
+ height: 15px;
+  margin-left: 30px;
+
+  color: #a40217;
+  
+}
+div.sideblock div.header {
+  background-color: #EDE9DC;
+    background-image: url(images/bg_onglet.gif);
+background-repeat: no-repeat;
+background-position: left top;
+border-width: 0px;
+ border-style:none;
+ height: 40px;
+ border: solid 1px ;
+ border-color: #B20518 #B20518 #EDE9DC #B20518;
+
+ /* padding: 0;
+  height: 1.8em;
+  border-style: solid;
+  border-color: #DDDDDD #CCCCCC #416C9D #DDDDDD;*/
+
+}
+
+
+div.sideblock div.content {
+  padding: 0.3em 0.3em;
+  background-color: #FFFFFF;
+
+
+  	background-image: url(images/bg_nu.jpg);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	border: 1px solid;
+	   border-color: #B20518 #B20518 #B20518 #B20518;
+	 /* 	  border-width: 1px;
+  border-style: none solid solid;
+  border-right-color: #DDDDDD;
+  border-bottom-color: #DDDDDD;
+  border-left-color: #FFFFFF;*/
+
+}
+
+div.sideblock table.calendar-controls td.current {
+  text-align: center;
+}
+div.sideblock table.minicalendar td.day {
+  text-align: center;
+  font-size: 0.9em;
+}
+div.sideblock table.minicalendar {
+  border-style: none;
+}
+div.sideblock  {
+  border-style: none;
+    border-width: 0px;
+}
+
+body#admin-lang h2.main {
+  font-size: 1em;
+  text-align: left;
+}
+body#course-index table.generalbox {
+  background-color: #EEEEEE;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FFFFFF #DDDDDD #DDDDDD #FFFFFF;
+}
+table.minicalendar td.today {
+  line-height: 1.4em;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #A00011;
+}
+div.sideblock table.minicalendar tr.weekdays {
+  font-size: 0.8em;
+}
+div.courseboxcontent {
+  background-color: #EEEEEE;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FFFFFF #DDDDDD #DDDDDD #FFFFFF;
+}
+td.courseboxcontent {
+  background-color: #EEEEEE;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FFFFFF #DDDDDD #DDDDDD #FFFFFF;
+}
+.tabrow td {
+  /*border-width: 0px;*/
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: #416C9D;
+}
+.tabrow td.selected {
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-style: solid solid none;
+  border-top-color: #416C9D;
+  border-right-color: #416C9D;
+  border-left-color: #416C9D;
+}
+.sideblock .content .message {
+  text-align: left;
+}
+.sideblock .header .hide-show img.hide-show-image {
+  background-image: url(./pix/t/switch_minus.gif);
+  background-repeat: no-repeat;
+  margin-top: 0;
+ 
+}
+.sideblock.hidden .header .hide-show img.hide-show-image {
+  background-image: url(../../pix/t/switch_plus.gif);
+  background-repeat: no-repeat;
+  margin-top: 2px;
+}
+#calendar .event_global {
+  background-color: #D6F8CD;
+  border-color: #D6F8CD;
+}
+.minicalendar .event_global {
+  background-color: #D6F8CD;
+  border-color: #D6F8CD;
+}
+.block_calendar_month .event_global {
+  background-color: #D6F8CD;
+  border-color: #D6F8CD;
+}
+#calendar .event_course {
+  background-color: #FFD3BD;
+  border-color: #FFD3BD;
+}
+.minicalendar .event_course {
+  background-color: #FFD3BD;
+  border-color: #FFD3BD;
+}
+.block_calendar_month .event_course {
+  background-color: #FFD3BD;
+  border-color: #FFD3BD;
+}
+#calendar .event_group {
+  background-color: #FEE7AE;
+  border-color: #FEE7AE;
+}
+.minicalendar .event_group {
+  background-color: #FEE7AE;
+  border-color: #FEE7AE;
+}
+.block_calendar_month .event_group {
+  background-color: #FEE7AE;
+  border-color: #FEE7AE;
+}
+#calendar .event_user {
+  background-color: #DCE7EC;
+  border-color: #DCE7EC;
+}
+.minicalendar .event_user {
+  background-color: #DCE7EC;
+  border-color: #DCE7EC;
+}
+.block_calendar_month .event_user {
+  background-color: #DCE7EC;
+  border-color: #DCE7EC;
+}
