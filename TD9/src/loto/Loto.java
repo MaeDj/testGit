@@ -218,7 +218,7 @@ public class Loto extends javax.swing.JFrame {
             }
             
         }
-        score.setText("Score: "+compteur+" chiffres corrects test test ");
+        score.setText("Score: "+compteur+" chiffres corrects test test version 2 ");
     }//GEN-LAST:event_jouerButtonMouseClicked
 
     private void effacerButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_effacerButtonMouseClicked
